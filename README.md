@@ -6,24 +6,24 @@ This project functions as a template for FastAPI projects.
 ## Project structure
 ```
 project/
-src/
-├─ users/ # named after the "domain" You would add folders such as "posts", "auth" and other domains on the same level as "users/"
+├─ app/
+│  ├─ users/ # named after the "domain" You would add folders such as "posts", "auth" and other domains on the same level as "users/"
+│  │  ├─ __init__.py
+│  │  ├─ models.py          # contains the SqlAlchemy models
+│  │  ├─ router.py          # contains the routes see <host>:<port>/docs for more
+│  │  ├─ schemas.py         # contains the Pydantic validation schema
+│  ├─ .env                  # ignored by .gitignore, can contain credentials to connect to the db
 │  ├─ __init__.py
-│  ├─ models.py          # contains the SqlAlchemy models
-│  ├─ router.py          # contains the routes see <host>:<port>/docs for more
-│  ├─ schemas.py         # contains the Pydantic validation schema
-├─ __init__.py
-├─ config.py             # contains (environment) configuration to access the db
-├─ database.py           # responsible for initializing the db session
-├─ main.py               # entrypoint for the application
-.editorconfig            # helpful for configuring editor to use correct spacing for example
-.env                     # ignored by .gitignore, can contain credentials to connect to the db
-.gitignore               
-docker-compose.yml
-Dockerfile
-lint.sh                  # helper script to run Ruff (linting, lint fixing and formatting)
-README.md
-requirements.txt         # contains the dependencies
+│  ├─ config.py             # contains (environment) configuration to access the db
+│  ├─ database.py           # responsible for initializing the db session
+│  ├─ main.py               # entrypoint for the application
+├─ .editorconfig            # helpful for configuring editor to use correct spacing for example
+├─ .gitignore               
+├─ docker-compose.yml
+├─ Dockerfile
+├─ lint.sh                  # helper script to run Ruff (linting, lint fixing and formatting)
+├─ README.md
+├─ requirements.txt         # contains the dependencies
 ```
 
 ## Virtual env
