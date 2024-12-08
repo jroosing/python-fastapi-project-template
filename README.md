@@ -3,6 +3,29 @@ This project functions as a template for FastAPI projects.
 
 *note:* This example assumes python is called using "python3" and pip is called using "pip3". your installation may differ.
 
+## Project structure
+```
+project/
+src/
+├─ users/ # named after the "domain" You would add folders such as "posts", "auth" and other domains on the same level as "users/"
+│  ├─ __init__.py
+│  ├─ models.py          # contains the SqlAlchemy models
+│  ├─ router.py          # contains the routes see <host>:<port>/docs for more
+│  ├─ schemas.py         # contains the Pydantic validation schema
+├─ __init__.py
+├─ config.py             # contains (environment) configuration to access the db
+├─ database.py           # responsible for initializing the db session
+├─ main.py               # entrypoint for the application
+.editorconfig            # helpful for configuring editor to use correct spacing for example
+.env                     # ignored by .gitignore, can contain credentials to connect to the db
+.gitignore               
+docker-compose.yml
+Dockerfile
+lint.sh                  # helper script to run Ruff (linting, lint fixing and formatting)
+README.md
+requirements.txt         # contains the dependencies
+```
+
 ## Virtual env
 In order to keep dependencies localized, it is possible to create a lightweight virtual environment (venv). 
 Each venv gets their own independent set of python packages installed.
