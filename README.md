@@ -20,6 +20,17 @@ This creates the new virtual environment and also activates it
 pip3 install -r requirements.txt
 ```
 
+## Running the app [docker-compose]
+In order to run the entire stack using docker-compose execute `docker compose up`
+If you want to run things in the background use `docker compose up -d` instead.
+
+The setup runs the app, postgres and pgadmin4.
+
+The credentials can be found in the docker-compose.yml.
+
+To access the app: localhost:8000
+To access pgadmin4: localhost:5000
+
 ## Linting and formatting
 My preference goes to ruff, which is a fast Python linter and formatter written in Rust.
 Ruff uses tools such as Flake8, isort and Black and has good IDE support.

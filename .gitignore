@@ -1,6 +1,7 @@
 __pycache__/
 .Python
 build
+postgres
 
 # IDE
 .vscode
